@@ -1,0 +1,154 @@
+
+.rightArrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    height: 120px;
+    width: 80px;
+    top: 40%;
+    right: 10%;
+    
+}
+.rightArrow__top, 
+.rightArrow__bottom {
+    margin-left: 50px;
+    background: #a3a2a0;
+    height: 3px;
+    left: -30px;
+    position: absolute;
+    top: 60px;
+    width: 37px;
+}
+.rightArrow__top {
+    top: 61px;
+}
+.rightArrow__top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+.rightArrow__bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.rightArrow__top::after, 
+.rightArrow__bottom::after {
+    background: #ffffff;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.rightArrow__top::after {
+    left: 100%;
+    right: 0;
+}
+.rightArrow__bottom::after {
+    left: 0;
+    right: 100%;
+}
+.rightArrow:hover .rightArrow__top::after {
+    left: 0;
+}
+.rightArrow:hover .rightArrow__bottom::after {
+    right: 0;
+}
+
+
+
+
+.leftArrow {
+    cursor: pointer;
+    height: 120px;
+    width: 80px;
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 10%; 
+}
+.leftArrow__top, 
+.leftArrow__bottom {
+    margin-left: 50px;
+    background: #a3a2a0;
+    height: 3px;
+    left: -30px;
+    position: absolute;
+    top: 60px;
+    width: 37px;
+}
+.leftArrow__top {
+    top: 61px;
+}
+.leftArrow__top {
+    transform: rotate(-45deg);
+    transform-origin: bottom left ;
+}
+.leftArrow__bottom {
+    transform: rotate(45deg);
+    transform-origin:  top left;
+}
+.leftArrow__top::after, 
+.leftArrow__bottom::after {
+    background: #ffffff;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* transition: all 0.15s; */
+}
+.leftArrow__top::after {
+    left: 100%;
+    right: 0;
+    /* transition-delay: 0s; */
+}
+.leftArrow__bottom::after {
+    left: 0;
+    right: 100%;
+    /* transition-delay: 0.15s; */
+}
+.leftArrow:hover .leftArrow__top::after {
+    left: 0;
+    /* transition-delay: 0.15s; */
+}
+.leftArrow:hover .leftArrow__bottom::after {
+    right: 0;
+    transition-delay: 0s;
+}
+@media(max-width:1190px){
+     .rightArrow{
+        top:30%;
+        right: 10%;
+    }
+    .leftArrow{
+        top:30%;
+        left: 10%;
+    } 
+}
+@media(max-width:1000px){
+    .rightArrow{
+        top:20%;
+        right: 1%;
+    }
+    .leftArrow{
+        top:20%;
+        left: 1%;
+    } 
+}
+/* @media(max-width:999px){
+    .rightArrow{
+        top:60%;
+        right: 1%;
+    }
+    .leftArrow{
+        top: 60%;
+    }
+} */
+
+@media(max-width:768px){
+    
+    .rightArrow{
+       display: none;
+    }
+    .leftArrow{
+        display: none;
+    }
+}
